@@ -9,21 +9,75 @@
       <nav>
         <img src="img/logo.svg" alt="Логотип" width="154" height="64" />
         <ul>
-          <li><a href="catalog.html">Каталог</a></li>
+          <li>
+            <a href="catalog.html">Каталог</a>
+            <ul>
+                <li><a href="">Новинки</a></li>
+                <li><a href="">Сливочное </a></li>
+                <li><a href="">Щербеты </a></li>
+                <li><a href="">Фруктовый лед</a></li>
+                <li><a href="">Мелорин </a></li>
+              </ul>
+          </li>
           <li><a href="">Доставка и оплата</a></li>
           <li><a href="">О компании</a></li>
         </ul>
         <ul>
-          <li><a href="">Поиск</a></li>
-          <li><a href="">Вход</a></li>
-          <li><a href="">Корзина</a></li>
+          <li>
+            <a href="">Поиск</a>
+          <div>
+            <form action="">
+              <label for="searchText" class="visually-hidden">Что ищем?</label>
+              <input type="search" name="search" placeholder="Что ищем?" id="searchText">
+            </form>
+          </div>
+          </li>
+          <li>
+            <a href="">Вход</a>
+          <div>
+            <form action="">
+              <label for="authEmail" class="visually-hidden">Электронная почта</label>
+              <input type="email" name="email" placeholder="Электронная почта" id="authEmail">
+              <label for="authPassword" class="visually-hidden">Пароль</label>
+              <input type="password" name="password" placeholder="Пароль" id="authPassword">
+              <button type="submit">Войти</button>
+              <a href="">Забыли пароль?</a>
+              <a href="">Новая регистрация</a>
+            </form>
+          </div>
+          </li>
+          <li>
+            <a href="">Корзина</a>
+          <div>
+            <ul>
+              <li>
+                <button type="button">Удалить товар из корзины</button>
+                <img src="img/products/1-1small.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33">
+                <span>Пломбир с апельсиновым джемом</span>
+                <span>1,5 кг х <span>200 руб.</span></span>
+                <span>300 руб.</span>
+              </li>
+              <li>
+                <button type="button">Удалить товар из корзины</button>
+                <img src="img/products/1-2small.jpg" alt="Клубничный пломбир с присыпкой 
+                из белого шоколада" width="33" height="33">
+                <span>Клубничный пломбир с присыпкой 
+                    из белого шоколада</span>
+                <span>1,5 кг х <span>300 руб.</span></span>
+                <span>450 руб.</span>
+              </li>
+            </ul>
+            <div>Итого: 750 руб.</div>
+          </div>
+          <div><a href="">Оформить заказ</a></div>
+          </li>
         </ul>
       </nav>
       С 10 до 20, ежедневно
       <a href="tel:+78124502525">8 812 450-25-25</a>
     </header>
     <main>
-      <h1>Глейси - лучшее мороженое</h1>
+      <h1 class="visually-hidden">Глейси - лучшее мороженое</h1>
       <section>
         <ul>
           <li>
@@ -156,7 +210,9 @@
           всякой ненужной ерунды. Честно =)
         </p>
         <form action="">
-          FORM
+          <label for="emailsign" class="visually-hidden"></label>
+          <input type="email" name="email" id="emailsign">
+          <button type="submit">Отправить</button>
         </form>
       </section>
       <section>
@@ -189,5 +245,18 @@
         <p>Сделано в <a href="">HTML Academy</a> &copy; 2019</p>
       </div>
     </footer>
+    <div>
+      <h3>Мы обязательно вам ответим!</h3>
+      <form action="">
+        <label for="textName" class="visually-hidden">Как вас зовут?</label>
+        <input type="text" name="name" placeholder="Как вас зовут?" id="textName">
+        <label for="emailAnswer" class="visually-hidden">Ваша почта для ответа?</label>
+        <input type="email" name="email" placeholder="Ваша почта для ответа?" id="emailAnswer">
+        <label for="comment" class="visually-hidden"></label>
+    <textarea name="comment" rows="6" placeholder="Напишите что-нибудь..." id="comment"></textarea>
+    <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button>
+    </div>
   </body>
 </html>
