@@ -30,51 +30,75 @@
           <li>
             <a href="">Поиск</a>
             <div>
-                <form action="">
-                  <label for="searchText" class="visually-hidden"></label>
-                  <input type="search" name="search" placeholder="Что ищем?" id="searchText">
-                  <button type="submit" class="visually-hidden">Найти</button>
-                </form>
-              </div>
+              <form action="">
+                <label for="searchText" class="visually-hidden"></label>
+                <input
+                  type="search"
+                  name="search"
+                  placeholder="Что ищем?"
+                  id="searchText"
+                />
+                <button type="submit" class="visually-hidden">Найти</button>
+              </form>
+            </div>
           </li>
           <li>
             <a href="">Вход</a>
             <div>
-                <form action="">
-                  <label for="emailAuth" class="visually-hidden"></label>
-                  <input type="email" name="email" placeholder="Электронная почта" id="emailAuth">
-                  <label for="passwordAuth" class="visually-hidden"></label>
-                  <input type="password" name="password" placeholder="Пароль" id="passwordAuth">
-                  <button type="submit">Войти</button>
-                  <a href="">Забыли пароль?</a>
-                  <a href="">Новая регистрация</a>
-                </form>
-              </div>
+              <form action="">
+                <label for="emailAuth" class="visually-hidden"></label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Электронная почта"
+                  id="emailAuth"
+                />
+                <label for="passwordAuth" class="visually-hidden"></label>
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Пароль"
+                  id="passwordAuth"
+                />
+                <button type="submit">Войти</button>
+                <a href="">Забыли пароль?</a>
+                <a href="">Новая регистрация</a>
+              </form>
+            </div>
           </li>
           <li>
             <a href="">Корзина</a>
             <div>
-                <ul>
-                  <li>
-                    <button type="button">Удалить товар из корзины</button>
-                    <img src="img/products/1-1small.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33">
-                    <span>Пломбир с апельсиновым джемом</span>
-                    <span>1,5 кг х <span>200 руб.</span></span>
-                    <span>300 руб.</span>
-                  </li>
-                  <li>
-                    <button type="button">Удалить товар из корзины</button>
-                    <img src="img/products/1-2small.jpg" alt="Клубничный пломбир с присыпкой 
-                    из белого шоколада" width="33" height="33">
-                    <span>Клубничный пломбир с присыпкой 
-                        из белого шоколада</span>
-                    <span>1,5 кг х <span>300 руб.</span></span>
-                    <span>450 руб.</span>
-                  </li>
-                </ul>
-                <div>Итого: 750 руб.</div>
-              </div>
-              <div><a href="">Оформить заказ</a></div>
+              <ul>
+                <li>
+                  <button type="button">Удалить товар из корзины</button>
+                  <img
+                    src="img/products/1-1small.jpg"
+                    alt="Пломбир с апельсиновым джемом"
+                    width="33"
+                    height="33"
+                  />
+                  <span>Пломбир с апельсиновым джемом</span>
+                  <span>1,5 кг х <span>200 руб.</span></span>
+                  <span>300 руб.</span>
+                </li>
+                <li>
+                  <button type="button">Удалить товар из корзины</button>
+                  <img
+                    src="img/products/1-2small.jpg"
+                    alt="Клубничный пломбир с присыпкой 
+                    из белого шоколада"
+                    width="33"
+                    height="33"
+                  />
+                  <span>Клубничный пломбир с присыпкой из белого шоколада</span>
+                  <span>1,5 кг х <span>300 руб.</span></span>
+                  <span>450 руб.</span>
+                </li>
+              </ul>
+              <div>Итого: 750 руб.</div>
+            </div>
+            <div><a href="">Оформить заказ</a></div>
           </li>
         </ul>
       </nav>
@@ -101,32 +125,44 @@
           <option value="fat">по жирности</option>
         </select>
         <label for="filterPrice">Цена: 100 руб. – 500 руб.</label>
-        <input type="range" name="price" id="filterPrice">
+        <input type="range" name="price" id="filterPrice" />
         <fieldset>
           <legend>Жирность:</legend>
-          <input type="radio" name="fat" id="filterFat1" value="0">
+          <input type="radio" name="fat" id="filterFat1" value="0" />
           <label for="filterFat1">0%</label>
-          <input type="radio" name="fat" id="filterFat2" value="10">
+          <input type="radio" name="fat" id="filterFat2" value="10" />
           <label for="filterFat2">до 10%</label>
-          <input type="radio" name="fat" id="filterFat3" value="30">
+          <input type="radio" name="fat" id="filterFat3" value="30" />
           <label for="filterFat3">до 30%</label>
-          <input type="radio" name="fat" id="filterFat4" value="100">
+          <input type="radio" name="fat" id="filterFat4" value="100" />
           <label for="filterFat4">выше 30%</label>
         </fieldset>
         <fieldset>
-            <legend>Наполнители:</legend>
-            <input type="checkbox" name="fat" id="filterFiller1" value="chocolate" checked>
-            <label for="filterFiller1">шоколадные</label>
-            <input type="checkbox" name="fat" id="filterFiller2" value="sugar" checked>
-            <label for="filterFiller2">сахарные присыпки</label>
-            <input type="checkbox" name="fat" id="filterFiller3" value="fruit">
-            <label for="filterFiller3">фрукты</label>
-            <input type="checkbox" name="fat" id="filterFiller4" value="syrup">
-            <label for="filterFiller4">сиропы</label>
-            <input type="checkbox" name="fat" id="filterFiller5" value="jam">
-            <label for="filterFiller5">джемы</label>
-          </fieldset>
-          <button type="submit">Применить</button>
+          <legend>Наполнители:</legend>
+          <input
+            type="checkbox"
+            name="fat"
+            id="filterFiller1"
+            value="chocolate"
+            checked
+          />
+          <label for="filterFiller1">шоколадные</label>
+          <input
+            type="checkbox"
+            name="fat"
+            id="filterFiller2"
+            value="sugar"
+            checked
+          />
+          <label for="filterFiller2">сахарные присыпки</label>
+          <input type="checkbox" name="fat" id="filterFiller3" value="fruit" />
+          <label for="filterFiller3">фрукты</label>
+          <input type="checkbox" name="fat" id="filterFiller4" value="syrup" />
+          <label for="filterFiller4">сиропы</label>
+          <input type="checkbox" name="fat" id="filterFiller5" value="jam" />
+          <label for="filterFiller5">джемы</label>
+        </fieldset>
+        <button type="submit">Применить</button>
       </section>
       <ul>
         <li>
