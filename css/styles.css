@@ -1,0 +1,310 @@
+body {
+  background-color: #849d8f;
+  color: #ffffff;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #ffbc9e;
+}
+.darktext {
+  color: #323232;
+}
+.darktext a:hover,
+.darktext a:focus,
+.darktext a:active {
+  color: #e84d37;
+}
+.button {
+  background-color: #e74a35;
+  background-image: linear-gradient(to top, #ca3824, #f26843);
+  border: none;
+  border-radius: 23px;
+  box-shadow: 0px 2px 2px 0 rgba(85, 8, 0, 0.54);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+  padding: 11px 24px;
+  text-decoration: none;
+}
+.button:hover,
+.button:focus {
+  background-color: #f26843;
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    ),
+    linear-gradient(to top, #e74a35, #f26843);
+}
+.button:active {
+  background-color: #ca3824;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.07),
+      rgba(0, 0, 0, 0.07)
+    ),
+    linear-gradient(to bottom, #e74a35, #f26843);
+  box-shadow: inset 0px 2px 2px 0 #942718;
+}
+.price span {
+  font-size: 66.66%;
+}
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  position: absolute;
+  width: 1px;
+}
+.header {
+}
+.header-nav-main a,
+.header-nav-search > a,
+.header-nav-auth > a,
+.header-nav-cart > a {
+  border-radius: 16px;
+  color: #ffffff;
+  display: block;
+  font-weight: bold;
+  line-height: 18px;
+  padding: 7px 14px;
+}
+.header-nav a.active {
+  background-color: #d07058;
+  text-decoration: none;
+}
+.header-nav-main a:hover,
+.header-nav-search > a:hover,
+.header-nav-auth > a:hover,
+.header-nav-cart > a:hover,
+.header-nav-main a:focus,
+.header-nav-search > a:focus,
+.header-nav-auth > a:focus,
+.header-nav-cart > a:focus {
+  background-color: #f7f6f3;
+  color: #323232;
+  outline: none;
+  text-decoration: none;
+}
+
+.header-nav-main a:active,
+.header-nav-search > a:active,
+.header-nav-auth > a:active,
+.header-nav-cart > a:active {
+  background-color: #ededed;
+  box-shadow: inset 0px 2px 1px 0 #696969;
+  text-decoration: none;
+}
+.header-nav > ul {
+  list-style: none;
+}
+.header-nav-main {
+}
+.header-nav-user {
+  font-size: 14px;
+}
+.header-nav-search > a {
+  background: rgba(255, 255, 255, 0.2) url("../img/search.svg") no-repeat 50%;
+  height: 32px;
+  padding: 0;
+  width: 32px;
+}
+.header-nav-search > a:hover,
+.header-nav-search > a:focus {
+  background-image: url("../img/search-hover.svg");
+}
+.header-nav-auth > a {
+  background: rgba(255, 255, 255, 0.2) url("../img/log-in.svg") no-repeat 16px
+    50%;
+  text-indent: 30px;
+}
+.header-nav-auth > a:hover,
+.header-nav-auth > a:focus {
+  background-image: url("../img/log-in-hover.svg");
+}
+.header-nav-cart > a {
+  background: rgba(255, 255, 255, 0.2) url("../img/cart.svg") no-repeat 16px 50%;
+  text-indent: 30px;
+}
+.header-nav-cart > a:hover,
+.header-nav-cart > a:focus {
+  background-image: url("../img/cart-hover.svg");
+}
+.header-nav-cart > a.notempty {
+  background-image: url(../img/cart-red.svg);
+}
+.schedule {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  text-align: right;
+}
+.schedule a {
+  color: inherit;
+  font-size: 22px;
+  line-height: 24px;
+  text-decoration: none;
+}
+.breadcrumbs {
+  font-size: 14px;
+  line-height: 16px;
+}
+.breadcrumbs ul {
+  list-style: none;
+}
+.breadcrumbs li {
+}
+.breadcrumbs li:not(:first-child)::before {
+  content: "\00bb";
+}
+.pagetitle {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+.category-list {
+  list-style: none;
+}
+.category-item {
+  font-size: 16px;
+  line-height: 22px;
+}
+.category-item img {
+  border-radius: 50%;
+}
+.category-item .price {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 45px;
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+}
+.specialoffers {
+}
+.specialoffers-list {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+  list-style: none;
+}
+.specialoffers-list h3 {
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 41px;
+}
+.offer1 {
+  background-image: url("../img/raspberry-bg.jpg");
+}
+.offer2 {
+  background-image: url("../img/chocolate-bg.jpg");
+}
+.about {
+  background: #eddfc4 url(../img/about-bg.jpg) repeat 50%;
+}
+.about h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+}
+.about ul {
+  list-style: none;
+}
+.about li {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  min-height: 49px;
+  padding: 17px 0 0 58px;
+}
+.about-1 {
+  background-image: url("../img/feature4.svg");
+}
+.about-2 {
+  background-image: url("../img/feature2.svg");
+}
+.about-3 {
+  background-image: url("../img/feature3.svg");
+}
+.about-4 {
+  background-image: url("../img/feature1.svg");
+}
+.blogpost {
+  background: #ffffff url(../img/blog-bg.jpg) no-repeat 100%;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  min-height: 220px;
+}
+.blogpost h2 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+.subscribe {
+  background: #f8f7f4;
+  border: 5px solid #ffffff;
+  border-image: url("../img/subscribe-bg.svg") 5 repeat;
+  color: #5a5a5a;
+  font-size: 16px;
+  line-height: 22px;
+}
+.socials {
+  list-style: none;
+}
+.socials a {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: 3px solid red;
+  border-radius: 50%;
+  display: block;
+  height: 32px;
+  opacity: 0.8;
+  width: 32px;
+}
+.socials-twitter {
+  background-image: url("../img/social-tw.svg");
+}
+.socials-instagram {
+  background-image: url("../img/social-ig.svg");
+}
+.socials-facebook {
+  background-image: url("../img/social-fb.svg");
+}
+.socials-vkontakte {
+  background-image: url("../img/social-vk.svg");
+}
+.footer-nav {
+  font-size: 13px;
+  line-height: 18px;
+  list-style: none;
+}
+.footer-nav .with_heart::before {
+  background: url("../img/heart.svg") no-repeat 0;
+  content: "";
+  display: block;
+  height: 13px;
+  width: 15px;
+}
+.footer-nav .with_heart {
+  font-weight: 700;
+}
+.footer-made_in {
+  font-size: 12px;
+  line-height: 18px;
+}
+.footer-made_in a::before {
+  content: "";
+  display: block;
+  background: url("../img/logo-htmlacademy-small.svg") no-repeat 0;
+  height: 39px;
+  width: 108px;
+}
