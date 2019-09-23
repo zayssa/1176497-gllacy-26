@@ -1,7 +1,7 @@
 body {
   background-color: #849d8f;
   color: #ffffff;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
 }
@@ -142,7 +142,7 @@ a:active {
   background-image: url("../img/cart-hover.svg");
 }
 .header-nav-cart > a.notempty {
-  background-image: url(../img/cart-red.svg);
+  background-image: url("../img/cart-red.svg");
 }
 .schedule {
   font-size: 14px;
@@ -209,7 +209,7 @@ a:active {
   background-image: url("../img/chocolate-bg.jpg");
 }
 .about {
-  background: #eddfc4 url(../img/about-bg.jpg) repeat 50%;
+  background: #eddfc4 url("../img/about-bg.jpg") repeat 50%;
 }
 .about h2 {
   font-size: 24px;
@@ -238,7 +238,7 @@ a:active {
   background-image: url("../img/feature1.svg");
 }
 .blogpost {
-  background: #ffffff url(../img/blog-bg.jpg) no-repeat 100%;
+  background: #ffffff url("../img/blog-bg.jpg") no-repeat 100%;
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
@@ -307,4 +307,36 @@ a:active {
   background: url("../img/logo-htmlacademy-small.svg") no-repeat 0;
   height: 39px;
   width: 108px;
+}
+.pagination {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+}
+.pagination ul {
+  list-style: none;
+}
+.pagination a,
+.pagination .disabled,
+.pagination .active {
+  border-radius: 13px;
+  display: block;
+  min-width: 10px;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+}
+.pagination a:hover,
+.pagination a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+.pagination a:active,
+.pagination .active {
+  color: #323232;
+  background-color: #fff;
+}
+.pagination .disabled {
+  opacity: 0.2;
 }
