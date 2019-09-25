@@ -120,7 +120,7 @@
         </ul>
       </section>
       <h1 class="pagetitle">Сливочное мороженое</h1>
-      <section>
+      <section class="filter">
         <label for="filterSort">Сортировка:</label>
         <select name="sort" id="filterSort">
           <option value="popular">по популярности</option>
@@ -130,7 +130,7 @@
         </select>
         <label for="filterPrice">Цена: 100 руб. – 500 руб.</label>
         <input type="range" name="price" id="filterPrice" />
-        <fieldset>
+        <fieldset class="filter-group">
           <legend>Жирность:</legend>
           <input type="radio" name="fat" id="filterFat1" value="0" />
           <label for="filterFat1">0%</label>
@@ -141,7 +141,7 @@
           <input type="radio" name="fat" id="filterFat4" value="100" />
           <label for="filterFat4">выше 30%</label>
         </fieldset>
-        <fieldset>
+        <fieldset class="filter-group">
           <legend>Наполнители:</legend>
           <input
             type="checkbox"
@@ -166,7 +166,7 @@
           <input type="checkbox" name="fat" id="filterFiller5" value="jam" />
           <label for="filterFiller5">джемы</label>
         </fieldset>
-        <button type="submit">Применить</button>
+        <button type="submit" class="filter-submit">Применить</button>
       </section>
       <ul class="category-list">
         <li class="category-item">
