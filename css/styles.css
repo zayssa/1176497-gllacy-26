@@ -80,7 +80,17 @@ a.td-n {
   position: absolute;
   width: 1px;
 }
+.wrapper {
+  max-width: 1154px;
+  margin: auto;
+  padding: 0 27px;
+}
 .header {
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .header-nav-main a,
 .header-nav-search > a,
@@ -119,13 +129,16 @@ a.td-n {
   box-shadow: inset 0px 2px 1px 0 #696969;
   text-decoration: none;
 }
-.header-nav > ul {
+.header-nav-main,
+.header-nav-user {
+  display: flex;
   list-style: none;
-}
-.header-nav-main {
+  margin: 0;
+  padding: 0;
 }
 .header-nav-user {
   font-size: 14px;
+  margin-left: auto;
 }
 .header-nav-search > a {
   background: rgba(255, 255, 255, 0.2) url("../img/search.svg") no-repeat 50%;
@@ -140,6 +153,7 @@ a.td-n {
 .header-nav-auth > a {
   background: rgba(255, 255, 255, 0.2) url("../img/log-in.svg") no-repeat 16px
     50%;
+  text-decoration: none;
   text-indent: 30px;
 }
 .header-nav-auth > a:hover,
@@ -148,6 +162,7 @@ a.td-n {
 }
 .header-nav-cart > a {
   background: rgba(255, 255, 255, 0.2) url("../img/cart.svg") no-repeat 16px 50%;
+  text-decoration: none;
   text-indent: 30px;
 }
 .header-nav-cart > a:hover,
@@ -174,7 +189,10 @@ a.td-n {
   line-height: 16px;
 }
 .breadcrumbs ul {
+  display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .breadcrumbs li {
 }
@@ -191,9 +209,13 @@ a.td-n {
   font-weight: 700;
   line-height: 60px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .carousel ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .filter {
 }
@@ -258,11 +280,18 @@ a.td-n {
   box-shadow: inset 0px 2px 1px 0 #696969;
 }
 .category-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .category-item {
+  flex: 0 0 267px;
   font-size: 16px;
   line-height: 22px;
+  text-align: center;
 }
 .category-item img {
   border-radius: 50%;
@@ -276,10 +305,17 @@ a.td-n {
 .specialoffers {
 }
 .specialoffers-list {
+  display: flex;
   font-size: 18px;
   font-weight: bold;
+  justify-content: space-between;
   line-height: 22px;
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.specialoffers-list li {
+  width: 560px;
 }
 .specialoffers-list h3 {
   font-size: 35px;
@@ -301,11 +337,17 @@ a.td-n {
   line-height: 30px;
 }
 .about ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .about li {
   background-position: 0 0;
   background-repeat: no-repeat;
+  flex: 0 0 469px;
   min-height: 49px;
   padding: 17px 0 0 58px;
 }
@@ -320,6 +362,14 @@ a.td-n {
 }
 .about-4 {
   background-image: url("../img/feature1.svg");
+}
+.media {
+  display: flex;
+  justify-content: space-between;
+}
+.blogpost,
+.subscribe {
+  flex: 0 0 560px;
 }
 .blogpost {
   background: #ffffff url("../img/blog-bg.jpg") no-repeat 100%;
@@ -341,6 +391,7 @@ a.td-n {
   font-size: 16px;
   line-height: 22px;
 }
+
 .pagination {
   color: #ffffff;
   font-size: 16px;
@@ -348,7 +399,11 @@ a.td-n {
   line-height: 18px;
 }
 .pagination ul {
+  display: flex;
+  justify-content: flex-end;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .pagination a,
 .pagination .disabled,
@@ -397,8 +452,16 @@ a.td-n {
   line-height: 24px;
   font-weight: 700;
 }
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 36px 0;
+}
 .socials {
+  display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .socials a {
   border: 3px solid rgba(255, 255, 255, 0.5);
@@ -441,28 +504,44 @@ a.td-n {
   background-image: url("../img/social-vk.svg");
 }
 .footer-nav {
+  columns: 2;
   font-size: 13px;
   line-height: 18px;
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-nav .with_heart {
+  font-weight: 700;
+  position: relative;
 }
 .footer-nav .with_heart::before {
   background: url("../img/heart.svg") no-repeat 0;
   content: "";
   display: block;
   height: 13px;
+  left: -20px;
+  position: absolute;
+  top: 2px;
   width: 15px;
-}
-.footer-nav .with_heart {
-  font-weight: 700;
 }
 .footer-made_in {
   font-size: 12px;
   line-height: 18px;
+  padding-top: 29px;
+  position: relative;
+}
+.footer-made_in p {
+  margin: 0;
+  padding: 0;
 }
 .footer-made_in a::before {
   content: "";
   display: block;
   background: url("../img/logo-htmlacademy-small.svg") no-repeat 0;
   height: 39px;
+  left: 0;
+  position: absolute;
+  top: -19px;
   width: 108px;
 }
