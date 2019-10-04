@@ -14,7 +14,9 @@
     <div class="wrapper">
       <header class="header">
         <nav class="header-nav">
-          <img src="img/logo.svg" alt="Логотип" width="154" height="64" />
+          <span class="header-logo">
+            <img src="img/logo.svg" alt="Логотип" width="154" height="64" />
+          </span>
           <ul class="header-nav-main">
             <li>
               <a href="catalog.html">Каталог</a>
@@ -42,6 +44,7 @@
                     name="search"
                     placeholder="Что ищем?"
                     id="searchText"
+                    class="input"
                   />
                   <button type="submit" class="visually-hidden">Найти</button>
                 </form>
@@ -59,6 +62,7 @@
                     name="email"
                     placeholder="Электронная почта"
                     id="authEmail"
+                    class="input"
                   />
                   <label for="authPassword" class="visually-hidden"
                     >Пароль</label
@@ -68,6 +72,7 @@
                     name="password"
                     placeholder="Пароль"
                     id="authPassword"
+                    class="input"
                   />
                   <button type="submit">Войти</button>
                   <a href="">Забыли пароль?</a>
@@ -120,7 +125,8 @@
       </header>
       <main>
         <h1 class="visually-hidden">Глейси - лучшее мороженое</h1>
-        <section class="carousel">
+        <section class="carousel" style="display: none;">
+          <h2 class="visually-hidden">Вместе вкуснее</h2>
           <ul>
             <li>
               <p>Крем-брюле и пломбир с малиновым джемом</p>
@@ -140,6 +146,7 @@
           </ul>
         </section>
         <section class="specialoffers">
+          <h2 class="visually-hidden">Специальные предложения</h2>
           <ul class="specialoffers-list">
             <li class="offer1">
               <h3>Малинка даром!</h3>
@@ -147,7 +154,9 @@
                 При покупке 2 кг любого фруктового мороженого, добавим
                 в&nbsp;ваш заказ банку малинового варенья бесплатно.
               </p>
-              <a href="" class="button">Хочу варенье!</a>
+              <div class="specialoffers-button">
+                <a href="" class="button">Хочу варенье!</a>
+              </div>
             </li>
             <li class="offer2">
               <h3>Шоколадки даром!</h3>
@@ -155,11 +164,14 @@
                 При покупке 2 кг пломбира, добавим в ваш заказ упаковку
                 вкуснейшей шоколадной присыпки совершенно бесплатно.
               </p>
-              <a href="" class="button">Хочу шоколадки!</a>
+              <div class="specialoffers-button">
+                <a href="" class="button">Хочу шоколадки!</a>
+              </div>
             </li>
           </ul>
         </section>
         <section>
+          <h2 class="visually-hidden">Хиты продаж</h2>
           <ul class="category-list">
             <li class="category-item">
               <img
@@ -247,20 +259,27 @@
             >
           </section>
           <section class="subscribe">
-            <h2>Торопись, подпишись!</h2>
+            <h2 class="visually-hidden">Торопись, подпишись!</h2>
             <p>
               Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
               самого вкусного, что у нас происходит. Обещаем не спамить и не
               слать всякой ненужной ерунды. Честно =)
             </p>
             <form action="">
-              <label for="emailsign" class="visually-hidden"></label>
-              <input type="email" name="email" id="emailsign" />
+              <label for="emailsign" class="visually-hidden">Ваш email</label>
+              <input
+                type="email"
+                name="email"
+                id="emailsign"
+                class="input"
+                placeholder="Электронная почта"
+              />
               <button type="submit" class="button">Отправить</button>
             </form>
           </section>
         </div>
         <section class="map">
+          <h2 class="visually-hidden">Как нас найти</h2>
           <img src="img/map.jpg" alt="Карта" />
           <span class="map-marker">
             <img
@@ -271,15 +290,17 @@
           </span>
           <div class="map-contacts darktext">
             <p>
-              Адрес главного офиса и офлайн-магазина:
+              Адрес главного офиса </br> 
+              и офлайн-магазина:
               <span class="big">
-                ул. Большая Конюшенная 19/8, Санкт-Петербург
+                ул. Большая Конюшенная </br>
+                19/8, Санкт-Петербург
               </span>
             </p>
             <p>
               Для заказов по телефону:
               <span class="big">
-                <a href="tel:+78124502525" class="td-n">8 812 450-25-25</a>
+                <a href="tel:+78124502525" class="td-n map-phone">8 812 450-25-25</a>
               </span>
               (с 10 до 20 ежедневно)
             </p>
@@ -314,16 +335,22 @@
             ></a
           ></li>
         </ul>
-        <ul class="footer-nav">
-          <li><a href="" class="with_heart">Для поставщиков</a></li>
-          <li><a href="">О производстве</a></li>
-          <li><a href="">Наши документы</a></li>
-          <li><a href="">Экологические стандарты</a></li>
-        </ul>
+        <div class="footer-nav">
+          <div>
+            <a href="" class="with_heart">Для поставщиков</a>
+            <a href="">О производстве</a>
+          </div>
+          <div>
+            <a href="">Наши документы</a>
+            <a href="">Экологические стандарты</a>
+          </div>
+        </div>
         <div class="footer-made_in">
           <p>
             Сделано в
-            <a href="https://htmlacademy.ru/" target="_blank`">HTML Academy</a>
+            <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank`"
+              >HTML Academy</a
+            >
             &copy; 2019
           </p>
         </div>
@@ -337,6 +364,7 @@
             name="name"
             placeholder="Как вас зовут?"
             id="textName"
+            class="input"
           />
           <label for="emailAnswer" class="visually-hidden"
             >Ваша почта для ответа?</label
@@ -346,6 +374,7 @@
             name="email"
             placeholder="Ваша почта для ответа?"
             id="emailAnswer"
+            class="input"
           />
           <label for="comment" class="visually-hidden"></label>
           <textarea
