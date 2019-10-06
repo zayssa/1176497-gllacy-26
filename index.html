@@ -18,9 +18,9 @@
             <img src="img/logo.svg" alt="Логотип" width="154" height="64" />
           </span>
           <ul class="header-nav-main">
-            <li>
+            <li class="header-nav-catalog">
               <a href="catalog.html">Каталог</a>
-              <ul style="display: none;">
+              <ul class="header-nav-catalog-inner popover">
                 <li><a href="">Новинки</a></li>
                 <li><a href="">Сливочное </a></li>
                 <li><a href="">Щербеты </a></li>
@@ -34,7 +34,7 @@
           <ul class="header-nav-user">
             <li class="header-nav-search">
               <a href="" title="Поиск"></a>
-              <div style="display: none;">
+              <div class="header-search popover">
                 <form action="">
                   <label for="searchText" class="visually-hidden">
                     Что ищем?
@@ -52,7 +52,7 @@
             </li>
             <li class="header-nav-auth">
               <a href="">Вход</a>
-              <div style="display: none;">
+              <div class="popover header-auth">
                 <form action="">
                   <label for="authEmail" class="visually-hidden"
                     >Электронная почта</label
@@ -74,15 +74,17 @@
                     id="authPassword"
                     class="input"
                   />
-                  <button type="submit">Войти</button>
-                  <a href="">Забыли пароль?</a>
-                  <a href="">Новая регистрация</a>
+                  <button type="submit" class="button">Войти</button>
+                  <div class="header-auth-options">
+                    <a href="">Забыли пароль?</a><br />
+                    <a href="">Новая регистрация</a>
+                  </div>
                 </form>
               </div>
             </li>
             <li class="header-nav-cart">
               <a href="" aria-label="Корзина">Пусто</a>
-              <div style="display: none;">
+              <div class="popover" style="display: none">
                 <ul>
                   <li>
                     <button type="button">Удалить товар из корзины</button>
@@ -125,7 +127,7 @@
       </header>
       <main>
         <h1 class="visually-hidden">Глейси - лучшее мороженое</h1>
-        <section class="carousel" style="display: none;">
+        <section class="carousel">
           <h2 class="visually-hidden">Вместе вкуснее</h2>
           <ul>
             <li>
@@ -290,17 +292,19 @@
           </span>
           <div class="map-contacts darktext">
             <p>
-              Адрес главного офиса </br> 
+              Адрес главного офиса <br />
               и офлайн-магазина:
               <span class="big">
-                ул. Большая Конюшенная </br>
+                ул. Большая Конюшенная <br />
                 19/8, Санкт-Петербург
               </span>
             </p>
             <p>
               Для заказов по телефону:
               <span class="big">
-                <a href="tel:+78124502525" class="td-n map-phone">8 812 450-25-25</a>
+                <a href="tel:+78124502525" class="td-n map-phone"
+                  >8 812 450-25-25</a
+                >
               </span>
               (с 10 до 20 ежедневно)
             </p>
@@ -355,8 +359,10 @@
           </p>
         </div>
       </footer>
-      <div style="display: none;">
-        <h3>Мы обязательно вам ответим!</h3>
+    </div>
+    <div class="modal">
+      <div class="modal-body">
+        <h2>Мы обязательно вам ответим!</h2>
         <form action="">
           <label for="textName" class="visually-hidden">Как вас зовут?</label>
           <input
@@ -379,14 +385,15 @@
           <label for="comment" class="visually-hidden"></label>
           <textarea
             name="comment"
-            rows="6"
+            rows="10"
             placeholder="Напишите что-нибудь..."
             id="comment"
+            class="input"
           ></textarea>
-          <button type="submit">Отправить</button>
+          <button type="submit" class="button">Отправить</button>
         </form>
-        <button type="button">Закрыть</button>
-      </div></div
-    >
+        <button type="button" class="modal-close" aria-label="Закрыть"></button>
+      </div>
+    </div>
   </body>
 </html>

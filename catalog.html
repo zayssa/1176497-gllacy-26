@@ -18,11 +18,11 @@
             <img src="img/logo.svg" alt="Логотип" width="154" height="64" />
           </a>
           <ul class="header-nav-main">
-            <li>
+            <li class="header-nav-catalog">
               <a href="" class="active">Каталог</a>
-              <ul style="display: none;">
+              <ul class="header-nav-catalog-inner popover">
                 <li><a href="">Новинки</a></li>
-                <li><a href="">Сливочное </a></li>
+                <li><span class="active">Сливочное</span></li>
                 <li><a href="">Щербеты </a></li>
                 <li><a href="">Фруктовый лед</a></li>
                 <li><a href="">Мелорин </a></li>
@@ -34,7 +34,7 @@
           <ul class="header-nav-user">
             <li class="header-nav-search">
               <a href="" title="Поиск"></a>
-              <div style="display: none;">
+              <div class="header-search popover">
                 <form action="">
                   <label for="searchText" class="visually-hidden"></label>
                   <input
@@ -42,6 +42,7 @@
                     name="search"
                     placeholder="Что ищем?"
                     id="searchText"
+                    class="input"
                   />
                   <button type="submit" class="visually-hidden">Найти</button>
                 </form>
@@ -49,7 +50,7 @@
             </li>
             <li class="header-nav-auth">
               <a href="">Вход</a>
-              <div style="display: none;">
+              <div class="popover header-auth">
                 <form action="">
                   <label for="emailAuth" class="visually-hidden"></label>
                   <input
@@ -57,6 +58,7 @@
                     name="email"
                     placeholder="Электронная почта"
                     id="emailAuth"
+                    class="input"
                   />
                   <label for="passwordAuth" class="visually-hidden"></label>
                   <input
@@ -64,31 +66,35 @@
                     name="password"
                     placeholder="Пароль"
                     id="passwordAuth"
+                    class="input"
                   />
-                  <button type="submit">Войти</button>
-                  <a href="">Забыли пароль?</a>
-                  <a href="">Новая регистрация</a>
-                </form>
+                  <button type="submit" class="button">Войти</button>
+                  <div class="header-auth-options">
+                      <a href="">Забыли пароль?</a><br />
+                      <a href="">Новая регистрация</a>
+                    </div>
               </div>
             </li>
             <li class="header-nav-cart">
               <a href="" aria-label="Корзина" class="notempty">2 товара</a>
-              <div style="display: none;">
+              <div class="popover header-cart">
                 <ul>
-                  <li>
-                    <button type="button">Удалить товар из корзины</button>
+                  <li
+                      class="cart-item">
+                    <button type="button" aria-label="Удалить товар из корзины"></button>
                     <img
                       src="img/products/1-1small.jpg"
                       alt="Пломбир с апельсиновым джемом"
                       width="33"
                       height="33"
                     />
-                    <span>Пломбир с апельсиновым джемом</span>
-                    <span>1,5 кг х <span>200 руб.</span></span>
-                    <span>300 руб.</span>
+                    <span class="cart-item-name">Пломбир с апельсиновым джемом</span>
+                    <span  class="cart-item-price">1,5 кг х <span>200 руб.</span></span>
+                    <span class="cart-item-total">300 руб.</span>
                   </li>
-                  <li>
-                    <button type="button">Удалить товар из корзины</button>
+                  <li
+                      class="cart-item">
+                    <button type="button" aria-label="Удалить товар из корзины"></button>
                     <img
                       src="img/products/1-2small.jpg"
                       alt="Клубничный пломбир с присыпкой 
@@ -96,15 +102,16 @@
                       width="33"
                       height="33"
                     />
-                    <span
-                      >Клубничный пломбир с присыпкой из белого шоколада</span
+                    <span  class="cart-item-name">
+                  Клубничный пломбир с присыпкой из белого шоколада
+                      </span
                     >
-                    <span>1,5 кг х <span>300 руб.</span></span>
-                    <span>450 руб.</span>
+                    <span class="cart-item-price">1,5 кг х <span>300 руб.</span></span>
+                    <span class="cart-item-total">450 руб.</span>
                   </li>
                 </ul>
-                <div>Итого: 750 руб.</div>
-                <div><a href="">Оформить заказ</a></div>
+                <div class="header-cart-total">Итого: 750 руб.</div>
+                <div class="header-cart-order"><a href=""  class="button">Оформить заказ</a></div>
               </div>
             </li>
           </ul>
@@ -368,7 +375,9 @@
         <div class="footer-made_in">
           <p
             >Сделано в
-            <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a>
+            <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"
+              >HTML Academy</a
+            >
             &copy; 2019</p
           >
         </div>
