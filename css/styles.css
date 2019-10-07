@@ -33,6 +33,11 @@ a.td-n {
   overflow: hidden;
   position: absolute;
   z-index: 5;
+  display: none;
+}
+.popover.shown,
+.popover-trigger:hover .popover {
+  display: block;
 }
 .button {
   background-color: #e74a35;
@@ -77,6 +82,11 @@ a.td-n {
     ),
     linear-gradient(to bottom, #e74a35, #f26843);
   box-shadow: inset 0px 2px 2px 0 #942718;
+  color: #ffffff;
+}
+.darktext .button:hover,
+.darktext .button:focus,
+.darktext .button:active {
   color: #ffffff;
 }
 .input {
@@ -316,6 +326,9 @@ a.td-n {
 .header-nav-catalog {
   position: relative;
 }
+.header-nav-catalog:hover .header-nav-catalog-inner {
+  display: block;
+}
 .header-nav-catalog-inner {
   list-style: none;
   margin: 5px 0 0 -7px;
@@ -340,12 +353,25 @@ a.td-n {
   background-color: #f6b5a5;
   box-shadow: none;
 }
-
 .header-nav-catalog-inner .active {
   background-color: #d07058;
   color: #ffffff;
 }
-
+.header-nav-catalog-inner .super {
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 1px;
+}
+.header-nav-catalog-inner .super::after {
+  height: 1px;
+  content: "";
+  position: absolute;
+  right: 7px;
+  left: 7px;
+  bottom: -1px;
+  background: #323232;
+  opacity: 0.2;
+}
 .schedule {
   font-size: 14px;
   font-weight: bold;
@@ -397,6 +423,9 @@ a.td-n {
   padding: 0;
 }
 .filter {
+}
+.filter-row {
+  display: flex;
 }
 .filter label {
   font-size: 14px;
@@ -489,6 +518,37 @@ a.td-n {
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
   top: 210px;
   word-spacing: -7px;
+}
+.category-item .button {
+  display: none;
+}
+.category-item:hover {
+  z-index: 1;
+}
+.category-item:hover::before {
+  display: block;
+  content: "";
+  opacity: 0.2;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  position: absolute;
+  top: -6px;
+  right: -14px;
+  bottom: -77px;
+  left: -13px;
+  border-radius: 5px;
+  z-index: -1;
+}
+.category-item:hover .button {
+  display: block;
+  padding-right: 0;
+  padding-left: 0;
+  position: absolute;
+  bottom: -55px;
+  right: 0;
+  left: 0;
+  width: 200px;
+  margin: auto;
 }
 .specialoffers {
 }
