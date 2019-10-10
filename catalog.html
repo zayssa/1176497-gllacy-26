@@ -147,7 +147,7 @@
           <h2 class="visually-hidden">Фильтр и сортировка</h2>
           <form action="">
             <div class="filter-row">
-              <div>
+              <div class="filter-sort">
                 <label for="filterSort">Сортировка:</label>
                 <select name="sort" id="filterSort">
                   <option value="popular">по популярности</option>
@@ -156,19 +156,49 @@
                   <option value="fat">по жирности</option>
                 </select>
               </div>
-              <div>
-                <label for="filterPrice">Цена: 100 руб. – 500 руб.</label>
-                <input type="range" name="price" id="filterPrice" />
+              <div class="filter-price">
+                <div class="label">Цена: 100 руб. – 500 руб.</div>
+                <div class="range">
+                  <div class="range-bar">
+                    <button type="button"></button>
+                    <span></span>
+                    <button type="button"></button>
+                  </div>
+                </div>
               </div>
               <fieldset class="filter-group">
                 <legend>Жирность:</legend>
-                <input type="radio" name="fat" id="filterFat1" value="0" />
+                <input
+                  type="radio"
+                  name="fat"
+                  id="filterFat1"
+                  value="0"
+                  class="visually-hidden"
+                />
                 <label for="filterFat1">0%</label>
-                <input type="radio" name="fat" id="filterFat2" value="10" />
+                <input
+                  type="radio"
+                  name="fat"
+                  id="filterFat2"
+                  value="10"
+                  class="visually-hidden"
+                />
                 <label for="filterFat2">до 10%</label>
-                <input type="radio" name="fat" id="filterFat3" value="30" />
+                <input
+                  type="radio"
+                  name="fat"
+                  id="filterFat3"
+                  value="30"
+                  class="visually-hidden"
+                />
                 <label for="filterFat3">до 30%</label>
-                <input type="radio" name="fat" id="filterFat4" value="100" />
+                <input
+                  type="radio"
+                  name="fat"
+                  id="filterFat4"
+                  value="100"
+                  class="visually-hidden"
+                />
                 <label for="filterFat4">выше 30%</label>
               </fieldset>
             </div>
@@ -181,6 +211,7 @@
                   id="filterFiller1"
                   value="chocolate"
                   checked
+                  class="visually-hidden"
                 />
                 <label for="filterFiller1">шоколадные</label>
                 <input
@@ -189,6 +220,7 @@
                   id="filterFiller2"
                   value="sugar"
                   checked
+                  class="visually-hidden"
                 />
                 <label for="filterFiller2">сахарные присыпки</label>
                 <input
@@ -196,6 +228,7 @@
                   name="fat"
                   id="filterFiller3"
                   value="fruit"
+                  class="visually-hidden"
                 />
                 <label for="filterFiller3">фрукты</label>
                 <input
@@ -203,6 +236,7 @@
                   name="fat"
                   id="filterFiller4"
                   value="syrup"
+                  class="visually-hidden"
                 />
                 <label for="filterFiller4">сиропы</label>
                 <input
@@ -210,6 +244,7 @@
                   name="fat"
                   id="filterFiller5"
                   value="jam"
+                  class="visually-hidden"
                 />
                 <label for="filterFiller5">джемы</label>
               </fieldset>
