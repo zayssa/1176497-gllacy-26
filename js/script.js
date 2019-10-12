@@ -19,6 +19,12 @@ document
 
 var carouselTotal = document.querySelectorAll(".js-carousel li").length;
 var carouselCurrent = 0;
+var carouselNavHTML = "";
+for (var i = 0; i < carouselTotal; i++) {
+  carouselNavHTML += '<button type="button"></button>';
+}
+var carouselNav = document.querySelector(".js-carousel-nav");
+carouselNav.innerHTML = carouselNavHTML;
 setInterval(function() {
   carouselCurrent++;
   if (carouselCurrent == carouselTotal) {
