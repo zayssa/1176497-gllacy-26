@@ -271,6 +271,8 @@ a.td-n {
 }
 .header-nav-cart > a.notempty {
   background-image: url("../img/cart-red.svg");
+  color: #323232;
+  background-color: #f8f7f4;
 }
 .header-cart {
 }
@@ -434,6 +436,7 @@ a.td-n {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  transition: margin-left 500ms;
 }
 .carousel-item p {
   margin: 0 auto 30px auto;
@@ -468,6 +471,7 @@ a.td-n {
 .carousel-nav button:hover,
 .carousel-nav button:focus {
   background: rgba(248, 247, 244, 0.4);
+  outline: none;
 }
 .carousel-nav button.active {
   background: #ffffff;
@@ -499,7 +503,7 @@ a.td-n {
   font-weight: 500;
   height: 37px;
   line-height: 16px;
-  padding: 0 51px 0 16px;
+  padding: 0 31px 0 16px;
 }
 .filter select:hover,
 .filter select:focus {
@@ -610,7 +614,7 @@ a.td-n {
   margin: auto;
 }
 .range-bar span {
-  width: 4px;
+  width: 74px;
   background-color: #ffffff;
 }
 .range-bar button {
