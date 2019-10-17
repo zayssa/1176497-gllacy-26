@@ -4,8 +4,11 @@ if (document.querySelector("body.index")) {
     .addEventListener("click", function(e) {
       e.preventDefault();
       e.stopPropagation();
-      console.log(e);
       document.querySelector(".js-feedback-modal").classList.add("shown");
+      setTimeout(function() {
+        document.querySelector(".js-feedback-modal").style.cssText =
+          "opacity: 1;";
+      }, 1);
       return false;
     });
   document
@@ -13,8 +16,11 @@ if (document.querySelector("body.index")) {
     .addEventListener("click", function(e) {
       e.preventDefault();
       e.stopPropagation();
-      console.log(e);
-      document.querySelector(".js-feedback-modal").classList.remove("shown");
+      document.querySelector(".js-feedback-modal").style.cssText =
+        "opacity: 0;";
+      setTimeout(function() {
+        document.querySelector(".js-feedback-modal").classList.remove("shown");
+      }, 500);
       return false;
     });
 
@@ -23,7 +29,8 @@ if (document.querySelector("body.index")) {
   carouselNav.innerHTML = "";
   for (var i = 0; i < carouselTotal; i++) {
     carouselNav.innerHTML +=
-      '<button type="button" value="' + i + '"></button>';
+      // prettier-ignore
+      "<button type=\"button\" value=\"" + i + "\"></button>";
   }
   document
     .querySelector(".js-carousel-nav button:first-of-type")
@@ -36,13 +43,14 @@ if (document.querySelector("body.index")) {
     if (carouselCurrent == carouselTotal) {
       carouselCurrent = 0;
     }
-    document.querySelector(".js-carousel .carousel-item:first-child").style =
-      "margin-left: -" + carouselCurrent * 100 + "%";
-    var bgColor = document
-      .querySelector(
-        ".js-carousel .carousel-item:nth-child(" + (carouselCurrent + 1) + ")"
-      )
-      .getAttribute("data-color");
+    document
+      .querySelector(".js-carousel .carousel-item.active")
+      .classList.remove("active");
+    var carouselCurrentSlide = document.querySelector(
+      ".js-carousel .carousel-item:nth-child(" + (carouselCurrent + 1) + ")"
+    );
+    carouselCurrentSlide.classList.add("active");
+    var bgColor = carouselCurrentSlide.getAttribute("data-color");
     document.querySelector("body").style = "background-color: " + bgColor + ";";
     document
       .querySelector(".js-carousel-nav button.active")
