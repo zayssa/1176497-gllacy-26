@@ -1057,6 +1057,10 @@ a.td-n {
   margin: 0 -27px -30px -27px;
   position: relative;
 }
+.map iframe {
+  border: none;
+  width: 100%;
+}
 .map-marker {
   display: block;
   height: 140px;
