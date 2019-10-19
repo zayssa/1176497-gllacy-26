@@ -30,7 +30,7 @@ if (document.querySelector("body.index")) {
   for (var i = 0; i < carouselTotal; i++) {
     carouselNav.innerHTML +=
       // prettier-ignore
-      "<button type=\"button\" value=\"" + i + "\"></button>";
+      "<button type=\"button\" value=\"" + i + "\" aria-label=\"Спецпредложение " + (i + 1) + "\"></button>";
   }
   document
     .querySelector(".js-carousel-nav button:first-of-type")
@@ -73,4 +73,35 @@ if (document.querySelector("body.index")) {
       this.blur();
     });
   }
+
+  var feedbackForm = document.querySelector("#feedbackForm");
+  feedbackForm.addEventListener("submit", function(e) {
+    if (
+      !document.querySelector("#feedbackName").value ||
+      !document.querySelector("#feedbackEmail").value ||
+      !document.querySelector("#feedbackText").value
+    ) {
+      e.preventDefault();
+      document.querySelector(".js-feedback-modal").classList.add("form-error");
+      setTimeout(function() {
+        document
+          .querySelector(".js-feedback-modal")
+          .classList.remove("form-error");
+      }, 600);
+    }
+  });
 }
+
+var authForm = document.querySelector("#authForm");
+authForm.addEventListener("submit", function(e) {
+  if (
+    !document.querySelector("#authEmail").value ||
+    !document.querySelector("#authPassword").value
+  ) {
+    e.preventDefault();
+    document.querySelector("#authPopover").classList.add("form-error");
+    setTimeout(function() {
+      document.querySelector("#authPopover").classList.remove("form-error");
+    }, 600);
+  }
+});

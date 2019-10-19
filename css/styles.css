@@ -151,6 +151,10 @@ a.td-n {
   color: #999999;
   font-weight: 400;
 }
+.input:-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
 .input:hover,
 .input:focus {
   border: 2px solid rgba(154, 154, 154, 0.52);
@@ -273,6 +277,7 @@ a.td-n {
 }
 .header-search .input {
   width: 100%;
+  box-sizing: border-box;
 }
 .header-nav-auth > a {
   background: rgba(255, 255, 255, 0.2) url("../img/log-in.svg") no-repeat 17px
@@ -634,10 +639,16 @@ a.td-n {
   opacity: 0.8;
 }
 .filter-group label:hover::before,
-.filter-group label:focus::before,
+.filter-group input:focus + label::before,
 .filter-group label:hover::after,
-.filter-group label:focus::after {
+.filter-group input:focus + label::after {
   opacity: 1;
+}
+.filter-group input:focus + label {
+  outline-color: #4d90fe;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
 }
 .filter input[type="checkbox"] + label::before {
   background: url("../img/checkbox-off.svg") no-repeat 0 0;
@@ -1242,10 +1253,10 @@ a.td-n {
   background-color: rgba(0, 0, 0, 0.2);
   bottom: 0;
   display: none;
-  left: 0;
+  left: -50px;
   opacity: 0;
   position: fixed;
-  right: 0;
+  right: -50px;
   top: 0;
   -webkit-transition: opacity 500ms;
   -o-transition: opacity 500ms;
@@ -1314,4 +1325,27 @@ a.td-n {
   right: 17px;
   top: 14px;
   width: 18px;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+.form-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
 }

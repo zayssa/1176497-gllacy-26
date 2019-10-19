@@ -50,14 +50,14 @@
             </li>
             <li class="header-nav-auth popover-trigger">
               <a href="#">Вход</a>
-              <div class="popover header-auth">
-                <form action="#">
+              <div class="popover header-auth" id="authPopover">
+                <form action="#" id="authForm">
                   <label for="emailAuth" class="visually-hidden"></label>
                   <input
                     type="email"
                     name="email"
                     placeholder="Электронная почта"
-                    id="emailAuth"
+                    id="authEmail"
                     class="input"
                   />
                   <label for="passwordAuth" class="visually-hidden"></label>
@@ -65,7 +65,7 @@
                     type="password"
                     name="password"
                     placeholder="Пароль"
-                    id="passwordAuth"
+                    id="authPassword"
                     class="input"
                   />
                   <button type="submit" class="button">Войти</button>
@@ -160,9 +160,15 @@
                 <div class="label">Цена: 100 руб. – 500 руб.</div>
                 <div class="range">
                   <div class="range-bar">
-                    <button type="button"></button>
+                    <button
+                      type="button"
+                      aria-label="Цена от 100 рублей"
+                    ></button>
                     <span></span>
-                    <button type="button"></button>
+                    <button
+                      type="button"
+                      aria-label="Цена до 500 рублей"
+                    ></button>
                   </div>
                 </div>
               </div>
@@ -410,6 +416,7 @@
           <li
             ><a
               href="#"
+              aria-label="GllacyShop в Twitter"
               title="GllacyShop в Twitter"
               class="socials-twitter"
             ></a
@@ -417,6 +424,7 @@
           <li
             ><a
               href="#"
+              aria-label="GllacyShop в Instargam"
               title="GllacyShop в Instargam"
               class="socials-instagram"
             ></a
@@ -424,6 +432,7 @@
           <li
             ><a
               href="#"
+              aria-label="GllacyShop в Facebook"
               title="GllacyShop в Facebook"
               class="socials-facebook"
             ></a
@@ -431,6 +440,7 @@
           <li
             ><a
               href="#"
+              aria-label="GllacyShop в Vkontakte"
               title="GllacyShop в Vkontakte"
               class="socials-vkontakte"
             ></a

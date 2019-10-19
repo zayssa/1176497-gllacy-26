@@ -52,8 +52,8 @@
             </li>
             <li class="header-nav-auth popover-trigger">
               <a href="#">Вход</a>
-              <div class="popover header-auth">
-                <form action="#">
+              <div class="popover header-auth" id="authPopover">
+                <form action="#" id="authForm">
                   <label for="authEmail" class="visually-hidden"
                     >Электронная почта</label
                   >
@@ -298,6 +298,7 @@
           <li
             ><a
               href="#"
+              aria-label="GllacyShop в Twitter"
               title="GllacyShop в Twitter"
               class="socials-twitter"
             ></a
@@ -305,6 +306,7 @@
           <li
             ><a
               href="#"
+              aria-label="GllacyShop в Instargam"
               title="GllacyShop в Instargam"
               class="socials-instagram"
             ></a
@@ -312,6 +314,7 @@
           <li
             ><a
               href="#"
+              aria-label="GllacyShop в Facebook"
               title="GllacyShop в Facebook"
               class="socials-facebook"
             ></a
@@ -319,6 +322,7 @@
           <li
             ><a
               href="#"
+              aria-label="GllacyShop в Vkontakte"
               title="GllacyShop в Vkontakte"
               class="socials-vkontakte"
             ></a
@@ -348,13 +352,13 @@
     <div class="modal js-feedback-modal">
       <div class="modal-body">
         <h2>Мы обязательно вам ответим!</h2>
-        <form action="#">
+        <form action="#" id="feedbackForm">
           <label for="textName" class="visually-hidden">Как вас зовут?</label>
           <input
             type="text"
             name="name"
             placeholder="Как вас зовут?"
-            id="textName"
+            id="feedbackName"
             class="input"
           />
           <label for="emailAnswer" class="visually-hidden"
@@ -364,7 +368,7 @@
             type="email"
             name="email"
             placeholder="Ваша почта для ответа?"
-            id="emailAnswer"
+            id="feedbackEmail"
             class="input"
           />
           <label for="comment" class="visually-hidden"></label>
@@ -372,7 +376,7 @@
             name="comment"
             rows="10"
             placeholder="Напишите что-нибудь..."
-            id="comment"
+            id="feedbackText"
             class="input"
           ></textarea>
           <button type="submit" class="button">Отправить</button>
